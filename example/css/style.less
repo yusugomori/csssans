@@ -1,0 +1,592 @@
+@import "../../src/config";
+
+
+.font {
+  @import "../../src/css-sans-1.0.0";
+}
+
+
+.opacity(@opacity: 100) {
+  opacity: @opacity / 100;
+  filter: e(%("alpha(opacity=%d)", @opacity));
+}
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+section {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+
+
+  .demo {
+    padding: 22px 11px 44px 11px;
+    background-color: @white;
+
+    .cw {
+      .clearfix();
+      background-color: @white;
+      .box-sizing(border-box);
+
+      .div.focus {
+        background-color: rgba(0, 200, 255, 0.2);
+      }
+
+      ul {
+        .clearfix();
+        margin: 0;
+        border-bottom: dashed 1px @grayLight;
+        
+        &.l {
+          border-bottom: none;
+        }
+      }
+
+      li {
+        position: relative;
+        float: left;
+        width: 50%;
+        display: block;
+        padding: 33px 0;
+
+        .box-sizing(border-box);
+        
+        &:nth-child(2n+1) {
+          z-index: 1;
+          clear: both;
+          border-right: dashed 1px @grayLight;
+        }
+        &:nth-child(2n) {
+          .font .box {
+            padding-left: 44px;
+          }
+        }
+        
+      }
+      
+      .code {
+        position: relative;
+        z-index: 100;
+        // clear: both;
+        float: left;
+        font-size: 8px;
+        letter-spacing: 0.03em;
+        width: 60%;
+        .box-sizing(border-box);
+        padding: 0 11px 22px 22px;
+
+        .div {
+          // .transition(none);
+          .transition(all linear 100ms);
+          cursor: pointer;
+        }
+      }
+
+      .font {
+        float: left;
+        width: 40%;
+
+        .box {
+          padding: 0 0 0 22px;
+
+          div {
+            // .transition(none);
+            .transition(all linear 100ms);
+
+            &:before, &:after {
+                        .transition(all linear 100ms);
+                      }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// css code
+.code {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+
+  .div {
+    .transition(all linear 200ms);
+  }
+  
+  .line {
+    font-family: Consolas, Monaco,'Andale Mono', monospace;
+
+    &.I1 {
+      padding-left: 1em;
+    }
+    
+    span {
+      color: @black;
+      
+      &.ClN {
+        color: #795da3;
+        padding-right: 0.5em;
+      }
+      &.AtrN {
+        color: #0086b3;
+        padding-left: 0.5em;
+      }
+      &.QN {
+        color: #df5000;
+        padding-left: 0.5em;
+      }
+      &.DegN {
+        color: #a71d5d;
+      }
+      &.NC {
+        color: @black !important;
+      }
+      &.Z {
+        padding-left: 0 !important;
+      }
+
+      &.ON {
+        color: #969896;
+      }
+      &.TH {
+        color: @black;
+      }
+      &.TN {
+        color: #63a35c;
+      }
+      &.AN {
+        color: #795da3;
+        padding-left: 0.5em;
+      }
+      &.VN {
+        color: #df5000;
+      }
+    }
+  }
+}
+
+.font {
+  @focusColor: rgba(105, 225, 255, 1);
+  
+  .box {
+    height: 150px;
+    float: left;
+    margin: 44px 0 0 0;
+  }
+  
+  .A {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+        z-index: 99;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        background-color: @focusColor;
+        z-index: 99;
+      }
+    }
+  }
+
+
+  .B {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        border-color: @focusColor;
+        z-index: 99;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        border-color: @focusColor;
+        z-index: 99;
+      }
+    }
+  }
+
+  .C {
+    &.focus {
+      border-color: @focusColor;
+
+      &:before {
+        background-color: transparent;
+      }
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+        .opacity(75);
+      }
+    }
+  }
+
+  .D {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        border-color: @focusColor;
+      }
+    }
+  }
+
+  .E {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+      }
+    }
+  }
+
+  .F {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+      }
+    }
+  }
+
+  
+  .G {
+    position: relative;
+    top: 12.5px;
+    left: 10px;
+    width: 84px;
+    height: 95px;
+    @w: 15px;
+    border-width: @w 12px @w 16px;
+    border-color: @black;
+    border-style: solid;
+    .border-radius(e("50%"));
+
+    &:before {
+      .rotate(45deg);
+      position: absolute;
+      content: '';
+      top: 2px;
+      left: 48px;
+      background-color: @white;
+      width: 90px;
+      height: 90px;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: 0.5px;
+      right: 7px;
+      width: 28px;
+      height: 36px;
+      border-width: 13px 14px 0 0;
+      border-color: @black;
+      border-style: solid;
+    }
+    &.focus {
+      border-color: @focusColor;
+      &:before {
+        background-color: transparent;
+      }
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+        .opacity(75);
+      }
+    }
+    &.focusAfter {
+      &:after {
+        border-color: @focusColor;
+        z-index: 99;
+      }
+    }
+  }
+
+  .H {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+      }
+    }
+  }
+
+  .I {
+    &.focus {
+      background-color: @focusColor;
+    }
+  }
+
+  .J {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        border-color: @focusColor;
+      }
+      &:after {
+        background-color: transparent;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        background-color: @focusColor;
+        .opacity(75);
+      }
+    }
+  }
+
+  .K {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        background-color: @focusColor;
+      }
+    }
+  }
+
+  .L {
+    &.focus {
+      border-color: @focusColor;
+    }
+  }
+
+  .M {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        background-color: @focusColor;
+      }
+    }
+  }
+
+  .N {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+      }
+    }
+  }
+
+  .O {
+    &.focus {
+      border-color: @focusColor;
+    }
+  }
+
+  .P {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        border-color: @focusColor;
+      }
+    }
+  }
+
+  .Q {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        border-color: @focusColor;
+      }
+      &:after {
+        background-color: transparent;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        background-color: @focusColor;
+        .opacity(75);
+      }
+    }
+  }
+
+
+  .R {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        border-color: @focusColor;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        background-color: @focusColor;
+      }
+    }
+  }
+
+  
+  .S {
+    &.focus {
+      .rotate(0deg);
+      // background-color: rgba(105, 225, 255, 0.5);
+    }
+    &.focusBefore {
+      &:before {
+        border-color: @focusColor;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        border-color: @focusColor;
+      }
+    }
+  }
+
+  .T {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+      }
+    }
+  }
+
+  .U {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        border-color: @focusColor;
+      }
+    }
+  }
+
+  .V {
+    &.focus {
+      width: 0;
+    }
+    &.focusBefore {
+      &:before {
+        border-color: @focusColor;
+        z-index: 99;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        border-color: @focusColor;
+        z-index: 99;
+      }
+    }
+  }
+
+  .W {
+    &.focus {
+      width: 0;
+    }
+    &.focusBefore {
+      &:before {
+        border-color: @focusColor;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        border-color: @focusColor;
+      }
+    }
+  }
+
+  .X {
+    &.focus {
+      width: 0;
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+        z-index: 99;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        background-color: @focusColor;
+        z-index: 99;
+      }
+    }
+  }
+
+  .Y {
+    &.focus {
+      background-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+        z-index: 99;
+      }
+    }
+    &.focusAfter {
+      &:after {
+        background-color: @focusColor;
+        z-index: 99;
+      }
+    }
+  }
+
+  .Z {
+    &.focus {
+      border-color: @focusColor;
+    }
+    &.focusBefore {
+      &:before {
+        background-color: @focusColor;
+        z-index: 99;
+      }
+    }
+  }
+  
+}
