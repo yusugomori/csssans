@@ -1,0 +1,23 @@
+{
+  "name": "css-sans",
+  "version": "1.0.0",
+  "homepage": "https://github.com/yusugomori/csssans",
+  "authors": [
+    "yusugomori"
+  ],
+  "description": "CSS SANS is the font created by CSS, the programming language for web designing and typesetting.",
+  "keywords": [
+    "CSS",
+    "Typography",
+    "Font",
+    "Sans"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
