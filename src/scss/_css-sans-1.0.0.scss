@@ -1,0 +1,629 @@
+@import "config";
+
+.A {
+	@include transition(all linear 200ms);
+ 	position: relative;
+  	left: 30px;
+  	width: 60px;
+  	height: 91px;
+  	border-bottom: solid 14px $w;
+
+  	&:after, &:before{
+		@include skew(-19deg, 0);
+		position: absolute;
+  		content: '';
+  		top: 12.5px;
+  		left: 0;
+  		width: 16px;
+		height: 125px;
+  		background-color: $black;
+  	}
+
+  	&:after{
+		@include skew(19deg, 0);
+		left: 45px;
+  	}
+}
+.B {
+  position: relative;
+  top: 12.5px;
+  left: 10px;
+  width: 60px;
+  height: 125px;
+  border-left: solid 16px $black;
+
+  &:before, &:after {
+  		@include border-radius(0 240% 180% 0, 0 180% 180% 0);
+		position: absolute;
+		content: '';
+		width: 52px;
+		height: 39px;
+
+		border-width: $w $w 10px 0;
+		border-color: $black;
+		border-style: solid;
+	}
+
+  	&:after {
+		@include border-radius(0 180% 220% 0, 0 180% 180% 0);
+	    bottom: 0;
+	    width: 58px;
+	    height: 43px;
+	    border-width: 10px $w $w 0;
+  	}
+}
+.C {
+	@include border-radius(50%);
+  	position: relative;
+  	top: 12.5px;
+  	left: 10px;
+  	width: 84px;
+  	height: 95px;
+  	border-width: $w 12px $w 16px;
+  	border-color: $black;
+  	border-style: solid;
+
+  	&:before {
+	  	@include rotate(45deg);
+	    position: absolute;
+	    content: '';
+	    top: 2px;
+	    left: 49px;
+	    background-color: $white;
+	    width: 90px;
+	    height: 90px;
+  	}
+}
+.D {
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	border-left: solid $w $black;
+	height: 125px;
+
+	&:before {
+		@include border-radius(0 300% 300% 0, 0 180% 180% 0);
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 60px;
+		height: 95px;
+		border-width: $w $w $w 0;
+		border-color: $black;
+		border-style: solid;
+	}
+}
+.E{
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 63px;
+	height: 95px;
+	border-width: $w 0 $w 16px;
+	border-color: $black;
+	border-style: solid;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 38px;
+		left: 0px;
+		width: 53px;
+		height: 15px;
+		background-color: $black;
+	}
+}
+.F {
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 63px;
+	height: 110px;
+	border-width: $w 0 0 16px;
+	border-color: $black;
+	border-style: solid;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 38px;
+		left: 0px;
+		width: 53px;
+		height: 15px;
+		background-color: $black;
+  	}
+}
+.G {
+	@include border-radius(50%);
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 84px;
+	height: 95px;
+	border-width: $w 12px $w 16px;
+	border-color: $black;
+	border-style: solid;
+
+	&:before {
+		@include rotate(45deg);
+		position: absolute;
+		content: '';
+		top: 2px;
+		left: 48px;
+		background-color: $white;
+		width: 90px;
+		height: 90px;
+	}
+
+	&:after {
+		position: absolute;
+		content: '';
+		bottom: 0.5px;
+		right: 7px;
+		width: 28px;
+		height: 36px;
+		border-width: 13px 14px 0 0;
+		border-color: $black;
+		border-style: solid;
+	}
+}
+.H {
+  	position: relative;
+	  	top: 12.5px;
+	  	left: 10px;
+	  	width: 60px;
+	  	height: 125px;
+	  	border-width: 0 $w + 1px 0 $w + 1px;
+	  	border-color: $black;
+	  	border-style: solid;
+
+  	&:before {
+  	  position: absolute;
+  	  content: '';
+  	  top: 53px;
+  	  left: 0;
+  	  width: 60px;
+  	  height: 14px;
+  	  background-color: $black;
+  	}
+}
+.I {
+  	z-index: 1;
+  	position: relative;
+  	top: 12.5px;
+  	left: 20px;
+  	width: 16px;
+  	height: 125px;
+  	background-color: $black;
+}
+.J {
+  	position: relative;
+  	top: 12.5px;
+  	left: -5px;
+  	width: 75px;
+  	height: 66px;
+  	border-right: solid $w + 1px $black;
+
+  	&:before {
+		@include border-radius(0 0 75% 75%);
+		position: absolute;
+		content: '';
+		bottom: -60px;
+		right: -15px;
+		width: 50px;
+		height: 60px;
+		border-width: 0 $w + 1px $w 14px;
+		border-color: $black;
+		border-style: solid;
+	}
+	&:after {
+		@include rotate(-40deg);
+		position: absolute;
+		content: '';
+		top: 40px;
+		left: -20px;
+		width: 60px;
+		height: 60px;
+		background-color:$white;
+	}
+}
+.K {
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 80px;
+	height: 125px;
+	border-left: solid 16px $black;
+	overflow: hidden;
+
+	&:before {
+		@include skew(-43deg);
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 16px;
+		width: 19px;
+		height: 84px;
+		background-color: $black;
+	}
+
+	&:after {
+		@include skew(30deg);
+		position: absolute;
+		content: '';
+		bottom: 0;
+		right: 25px;
+		width: 18px;
+		height: 80px;
+		background-color: $black;
+	}
+}
+.L {
+  position: relative;
+  top: 12.5px;
+  left: 10px;
+  width: 63px;
+  height: 110px;
+  border-width: 0 0 $w 16px;
+  border-color: $black;
+  border-style: solid;
+}
+.M {
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 80px;
+	height: 125px;
+	border-width: 0 $w 0 $w;
+	border-color: $black;
+	border-style: solid;
+
+	&:before {
+		@include skew(20deg);
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 14px;
+		width: 12px;
+		height: 110px;
+		background-color: $black;
+	}
+  	&:after {
+		@include skew(-20deg);
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 14px;
+		width: 12px;
+		height: 110px;
+		background-color: $black;
+	}
+}
+.N {
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 63px;
+	height: 125px;
+	border-width: 0 $w 0 $w;
+	border-color: $black;
+	border-style: solid;
+
+	&:before {
+		@include skew(30deg);
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 24px;
+		width: 15px;
+		height: 125px;
+		background-color: $black;
+	}
+}
+.O {
+	@include border-radius(55% 55%, 52% 52%);
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 70px;
+	height: 97px;
+	border-width: 14px $w + 1px 14px $w + 1px;
+	border-color: $black;
+	border-style: solid;
+}
+.P {
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 60px;
+	height: 125px;
+	border-left: solid 16px $black;
+
+	&:before {
+		@include border-radius(0 220% 220% 0, 0 180% 180% 0);
+		position: absolute;
+		content: '';
+		width: 56px;
+		height: 50px;
+		border-width: 13px $w 13px 0;
+		border-color: $black;
+		border-style: solid;
+	}
+}
+.Q {
+	@include border-radius(55% 55%, 52% 52%);
+	z-index: -1;
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 70px;
+	height: 97px;
+	border-width: 14px $w + 1px 14px $w + 1px;
+	border-color: $black;
+	border-style: solid;
+
+	&:before {
+		@include rotate(-84deg);
+		@include border-radius(200% 0 0 200%, 100% 0 0 100%);
+		position: absolute;
+		content: '';
+		top: 82px;
+		left: 49px;
+		width: 16px;
+		height: 48px;
+		border-width: 16px 0  $w - 2px $w - 2px;
+		border-color: $black;
+		border-style: solid;
+	}
+  	&:after {
+  		@include rotate(-18deg);
+		position: absolute;
+		content: '';
+		bottom: -35px;
+		right: -44px;
+		width: 30px;
+		height: 30px;
+		background-color: $white;
+	}
+}
+.R {
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 60px;
+	height: 125px;
+	border-left: solid 16px $black;
+
+	&:before {
+		@include border-radius(0 220% 220% 0, 0 180% 180% 0);
+		position: absolute;
+		content: '';
+		width: 52px;
+		height: 44px;
+		border-width: 13px $w 13px 0;
+		border-color: $black;
+		border-style: solid;
+	}
+	&:after {
+		@include skew(32deg);
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 38px;
+		width: 18px;
+		height: 58px;
+		background-color: $black;
+	}
+}
+.S {
+	@include rotate(14deg);
+	position: relative;
+	width: 105px;
+	height: 150px;
+	top: 10px;
+	left: 10px;
+
+	&:before {
+  		@include rotate(18deg);
+    	@include border-radius(220% 0 0 150%, 150% 0 0 100%);
+    	position: absolute;
+    	content: '';
+    	width: 44px;
+    	height: 40px;
+    	border-width: 14px 0 $w 15.5px;
+    	border-color: $black;
+    	border-style: solid;
+  	}
+  	&:after {
+		@include rotate(198deg);
+		@include border-radius(240% 0 0 110%, 140% 0 0 100%);
+		position: absolute;
+		content: '';
+		top: 65px;
+		left: 21px;
+		width: 52px;
+		height: 44px;
+		border-width: 14px 0 $w $w;
+		border-color: $black;
+		border-style: solid;
+	}
+}
+.T {
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 100px;
+	height: 125px;
+	border-top: solid $w $black;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 42px;
+		width: 16px;
+		height: 110px;
+		background-color: $black;
+	}
+}
+.U {
+	position: relative;
+	top: 12.5px;
+	left: 10px;
+	width: 60px;
+	height: 80px;
+	border-width: 0 $w + 1px 0 $w + 1px;
+	border-color: $black;
+	border-style: solid;
+
+	&:before {
+		@include border-radius(0 0 200% 200%, 0 0 300% 300%);
+		position: absolute;
+		content: '';
+		top: 65px;
+		left: -16px;
+		width: 60px;
+		height: 45px;
+		border-width: 0 $w + 1px $w $w + 1px;
+		border-color: $black;
+		border-style: solid;
+	}
+}
+.V {
+  	position: relative;
+	top: 12.5px;
+	left: 30px;
+	width: 59px;
+
+	&:before {
+		@include skew(18deg);
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		height: 125px;
+		border-left: solid 16px $black;
+	}
+
+  	&:after {
+  		@include skew(-18deg);
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		height: 125px;
+		border-left: solid 16px $black;
+  	}
+}
+.W {
+	position: relative;
+	top: 12.5px;
+	left: 25px;
+	width: 100px;
+
+	&:before {
+		@include skew(11deg);
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 42px;
+		height: 125px;
+		border-width: 0 13px 0 $w;
+		border-color: $black;
+		border-style: solid;
+	}
+
+	&:after {
+		@include skew(-11deg);
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		width: 42px;
+		height: 125px;
+		border-width: 0 $w 0 13px;
+		border-color: $black;
+		border-style: solid;
+	}
+}
+.X {
+  position: relative;
+  top: 12.5px;
+  left: 50px;
+  width: 16px;
+  height: 125px;
+
+  &:before {
+  	@include skew(32deg);
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 125px;
+    background-color: $black;
+  }
+
+  &:after {
+  	@include skew(-32deg);
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 125px;
+    background-color: $black;
+  }
+}
+.Y {
+	position: relative;
+	top: 92.5px;
+	left: 52px;
+	width: 16px;
+	height: 50px;
+	background-color: $black;
+
+	&:before {
+		@include skew(28deg);
+		position: absolute;
+		content: '';
+		top: -80px;
+		left: -21px;
+		width: 16px;
+		height: 80px;
+		background-color: $black;
+	}
+	&:after {
+		@include skew(-28deg);
+		position: absolute;
+		content: '';
+		top: -80px;
+		right: -21px;
+		width: 16px;
+		height: 80px;
+		background-color: $black;
+	}
+}
+.Z {
+  position: relative;
+  top: 12.5px;
+  left: 10px;
+  width: 90px;
+  height: 95px;
+  border-width: $w 0 $w 0;
+  border-color: $black;
+  border-style: solid;
+
+  &:before {
+  	@include skew(-37deg);
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 36px;
+    width: 18px;
+    height: 95px;
+    background-color: $black;
+  }
+}
