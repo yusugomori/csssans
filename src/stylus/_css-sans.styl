@@ -1,0 +1,542 @@
+@import "_config.styl"
+/*!
+ * css-sans.css v1.0.0
+ * (c) 2015 Yusuke Sugomori
+ * MIT License | http://yusugomori.com/license/mit
+ */
+@charset 'UTF-8'
+.A
+  transition (all linear 200ms)
+  border-bottom: solid 14px $w
+  height: 91px
+  left: 30px
+  position: relative
+  width: 60px
+  &:after, &:before
+    skew(-19deg, 0)
+    background-color: $black
+    content: ""
+    height: 125px
+    left: 0
+    position: absolute
+    top: 12.5px
+    width: 16px
+  &:after
+    skew(19deg, 0)
+    left: 45px    
+.B
+  border-left: solid 16px $black
+  height: 125px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 60px
+  &:before, 
+  &:after
+    border-radius(0 240% 180% 0, 0 180% 180% 0)
+    border-color: $black    
+    border-style: solid
+    border-width: $w $w 10px 0
+    content: ""
+    height: 39px
+    position: absolute
+    width: 52px
+  &:after
+    border-radius(0 180% 220% 0, 0 180% 180% 0)
+    border-width: 10px $w $w 0
+    bottom: 0
+    height: 43px
+    width: 58px
+.C
+  border-radius(50%)
+  border-color: $black
+  border-style: solid
+  border-width: $w 12px $w 16px
+  height: 95px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 84px
+  &:before
+    rotate(45deg)
+    background-color: $white
+    content: ""
+    height: 90px
+    left: 49px
+    position: absolute
+    top: 2px
+    width: 90px
+.D
+  border-left: solid $w $black
+  height: 125px
+  left: 10px
+  position: relative
+  top: 12.5px
+  &:before
+    border-radius(0 300% 300% 0, 0 180% 180% 0)
+    border-color: $black
+    border-style: solid
+    border-width: $w $w $w 0
+    content: ""
+    height: 95px
+    left: 0
+    position: absolute
+    top: 0
+    width: 60px
+.E
+  border-color: $black
+  border-style: solid
+  border-width: $w 0 $w 16px
+  height: 95px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 63px
+  &:before
+    background-color: $black
+    content: ""
+    height: 15px
+    left: 0px
+    position: absolute
+    top: 38px
+    width: 53px
+.F
+  border-color: $black
+  border-style: solid
+  border-width: $w 0 0 16px
+  height: 110px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 63px
+  &:before
+    background-color: $black
+    content: ""
+    height: 15px
+    left: 0px
+    position: absolute
+    top: 38px
+    width: 53px
+.G
+  border-radius(50%)
+  border-color: $black
+  border-style: solid
+  border-width: $w 12px $w 16px
+  height: 95px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 84px
+  &:before
+    rotate(45deg)
+    background-color: $white
+    content: ""
+    height: 90px
+    left: 48px
+    position: absolute
+    top: 2px
+    width: 90px
+  &:after
+    border-color: $black
+    border-style: solid
+    border-width: 13px 14px 0 0
+    bottom: 0.5px
+    content: ""
+    height: 36px
+    position: absolute
+    right: 7px
+    width: 28px
+.H
+  border-color: $black
+  border-style: solid
+  border-width: 0 $w + 1px 0 $w + 1px
+  height: 125px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 60px
+  &:before
+    background-color: $black
+    content: ""
+    height: 14px
+    left: 0
+    position: absolute
+    top: 53px
+    width: 60px
+.I
+  background-color: $black
+  height: 125px
+  left: 20px
+  position: relative
+  top: 12.5px
+  width: 16px
+  z-index: 1
+.J
+  border-right: solid $w + 1px $black
+  height: 66px
+  left: -1*5px
+  position: relative
+  top: 12.5px
+  width: 75px
+  &:before
+    border-radius(0 0 75% 75%)
+    border-color: $black
+    border-style: solid
+    border-width: 0 $w + 1px $w 14px
+    bottom: -1*60px
+    content: ""
+    height: 60px
+    position: absolute
+    right: -1*15px
+    width: 50px
+  &:after
+    rotate(-40deg)
+    background-color: $white
+    content: ""
+    height: 60px
+    left: -1*20px
+    position: absolute
+    top: 40px
+    width: 60px
+.K
+  border-left: solid 16px $black
+  height: 125px
+  left: 10px
+  overflow: hidden
+  position: relative
+  top: 12.5px
+  width: 80px
+  &:before
+    skew(-43deg, 0)
+    background-color: $black
+    content: ""
+    height: 84px
+    left: 16px
+    position: absolute
+    top: 0
+    width: 19px
+  &:after
+    skew(30deg, 0)
+    background-color: $black
+    bottom: 0
+    content: ""
+    height: 80px
+    position: absolute
+    right: 25px
+    width: 18px
+.L
+  border-color: $black
+  border-style: solid
+  border-width: 0 0 $w 16px
+  height: 110px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 63px
+.M
+  border-color: $black
+  border-style: solid
+  border-width: 0 $w 0 $w
+  height: 125px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 80px
+  &:before
+    skew(20deg, 0)
+    background-color: $black
+    content: ""
+    height: 110px
+    left: 14px
+    position: absolute
+    top: 0
+    width: 12px
+  &:after
+    skew(-20deg, 0)
+    background-color: $black
+    content: ""
+    height: 110px
+    position: absolute
+    right: 14px
+    top: 0
+    width: 12px
+.N
+  border-color: $black
+  border-style: solid
+  border-width: 0 $w 0 $w
+  height: 125px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 63px
+  &:before
+    skew(30deg, 0)
+    background-color: $black
+    content: ""
+    height: 125px
+    left: 24px
+    position: absolute
+    top: 0
+    width: 15px
+.O
+  border-radius(55% 55%, 52% 52%)
+  border-color: $black
+  border-style: solid
+  border-width: 14px $w + 1px 14px $w + 1px
+  height: 97px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 70px
+.P
+  border-left: solid 16px $black
+  height: 125px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 60px
+  &:before
+    border-radius(0 220% 220% 0, 0 180% 180% 0)
+    border-color: $black
+    border-style: solid
+    border-width: 13px $w 13px 0
+    content: ""
+    height: 50px
+    position: absolute
+    width: 56px
+.Q
+  border-radius(55% 55%, 52% 52%)
+  border-color: $black
+  border-style: solid
+  border-width: 14px $w + 1px 14px $w + 1px
+  height: 97px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 70px
+  z-index: -1*1
+  &:before
+    border-radius(200% 0 0 200%, 100% 0 0 100%)
+    rotate(-84deg)
+    border-color: $black
+    border-style: solid
+    border-width: 16px 0 $w - 2px $w - 2px
+    content: ""
+    height: 48px
+    left: 49px
+    position: absolute
+    top: 82px
+    width: 16px
+  &:after
+    rotate(-18deg)
+    background-color: $white
+    bottom: -1*35px
+    content: ""
+    height: 30px
+    position: absolute
+    right: -1*44px
+    width: 30px
+.R
+  border-left: solid 16px $black
+  height: 125px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 60px
+  &:before
+    border-radius(0 220% 220% 0, 0 180% 180% 0)
+    border-color: $black
+    border-style: solid
+    border-width: 13px $w 13px 0
+    content: ""
+    height: 44px
+    position: absolute
+    width: 52px
+  &:after
+    skew(32deg, 0)
+    background-color: $black
+    bottom: 0
+    content: ""
+    height: 58px
+    left: 38px
+    position: absolute
+    width: 18px
+.S
+  rotate(14deg)
+  height: 150px
+  left: 10px
+  position: relative
+  top: 10px
+  width: 105px
+  &:before
+    border-radius(220% 0 0 150%, 150% 0 0 100%)
+    rotate(18deg)
+    border-color: $black
+    border-style: solid
+    border-width: 14px 0 $w 15.5px
+    content: ""
+    height: 40px
+    position: absolute
+    width: 44px
+  &:after
+    border-radius(240% 0 0 110%, 140% 0 0 100%)
+    rotate(198deg)
+    border-color: $black
+    border-style: solid
+    border-width: 14px 0 $w $w
+    content: ""
+    height: 44px
+    left: 21px
+    position: absolute
+    top: 65px
+    width: 52px
+.T
+  border-top: solid $w $black
+  height: 125px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 100px
+  &:before
+    background-color: $black
+    content: ""
+    height: 110px
+    left: 42px
+    position: absolute
+    top: 0
+    width: 16px
+.U
+  border-color: $black
+  border-style: solid
+  border-width: 0 $w + 1px 0 $w + 1px
+  height: 80px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 60px
+  &:before
+    border-radius(0 0 200% 200%, 0 0 300% 300%)
+    border-color: $black
+    border-style: solid
+    border-width: 0 $w + 1px $w $w + 1px
+    content: ""
+    height: 45px
+    left: -1*16px
+    position: absolute
+    top: 65px
+    width: 60px
+.V
+  left: 30px
+  position: relative
+  top: 12.5px
+  width: 59px
+  &:before
+    skew(18deg, 0)
+    border-left: solid 16px $black
+    content: ""
+    height: 125px
+    left: 0
+    position: absolute
+    top: 0
+  &:after
+    skew(-18deg, 0)
+    border-left: solid 16px $black
+    content: ""
+    height: 125px
+    position: absolute
+    right: 0
+    top: 0
+.W
+  left: 25px
+  position: relative
+  top: 12.5px
+  width: 100px
+  &:before
+    skew(11deg, 0)
+    border-color: $black
+    border-style: solid
+    border-width: 0 13px 0 $w
+    content: ""
+    height: 125px
+    left: 0
+    position: absolute
+    top: 0
+    width: 42px
+  &:after
+    skew(-11deg, 0)
+    border-color: $black
+    border-style: solid
+    border-width: 0 $w 0 13px
+    content: ""
+    height: 125px
+    position: absolute
+    right: 0
+    top: 0
+    width: 42px
+.X
+  height: 125px
+  left: 50px
+  position: relative
+  top: 12.5px
+  width: 16px
+  &:before
+    skew(32deg, 0)
+    background-color: $black
+    content: ""
+    height: 125px
+    left: 0
+    position: absolute
+    top: 0
+    width: 16px
+  &:after
+    skew(-32deg, 0)
+    background-color: $black
+    content: ""
+    height: 125px
+    position: absolute
+    right: 0
+    top: 0
+    width: 16px
+.Y
+  background-color: $black
+  height: 50px
+  left: 52px
+  position: relative
+  top: 92.5px
+  width: 16px
+  &:before
+    skew(28deg, 0)
+    background-color: $black
+    content: ""
+    height: 80px
+    left: -1*21px
+    position: absolute
+    top: -1*80px
+    width: 16px
+  &:after
+    skew(-28deg, 0)
+    background-color: $black
+    content: ""
+    height: 80px
+    position: absolute
+    right: -1*21px
+    top: -1*80px
+    width: 16px
+.Z
+  border-color: $black
+  border-style: solid
+  border-width: $w 0 $w 0
+  height: 95px
+  left: 10px
+  position: relative
+  top: 12.5px
+  width: 90px
+  &:before
+    skew(-37deg, 0)
+    background-color: $black
+    content: ""
+    height: 95px
+    left: 36px
+    position: absolute
+    top: 0
+    width: 18px

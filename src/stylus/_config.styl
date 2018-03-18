@@ -1,0 +1,41 @@
+//Variables
+$w = 15px
+$black = #231815
+$white = white
+
+//Mixin
+border-radius($horizontal_radius, $vertical_radius = false)
+  if $vertical_radius
+    -webkit-border-radius: ($horizontal_radius / $vertical_radius)
+    -moz-border-radius: ($horizontal_radius / $vertical_radius)
+    -ms-border-radius: ($horizontal_radius / $vertical_radius)
+    -o-border-radius: ($horizontal_radius / $vertical_radius)
+    border-radius: ($horizontal_radius / $vertical_radius)
+  else
+    $border_radius = $horizontal_radius
+    -webkit-border-radius: $border_radius
+    -moz-border-radius: $border_radius
+    -ms-border-radius: $border_radius
+    -o-border-radius: $border_radius
+    border-radius: $border_radius
+
+transition()
+  -webkit-transition arguments
+  -moz-transition arguments
+  -ms-transition arguments
+  -o-transition arguments
+  transition arguments
+
+skew()
+  -webkit-transform: arguments
+  -moz-transform: arguments
+  -ms-transform: arguments
+  -o-transform: arguments
+  transform: arguments
+
+rotate()
+  -webkit-transform: arguments
+  -moz-transform: arguments
+  -ms-transform: arguments
+  -o-transform: arguments
+  transform: arguments
